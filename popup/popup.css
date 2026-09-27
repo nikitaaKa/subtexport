@@ -1,0 +1,166 @@
+:root {
+  color-scheme: dark;
+  --bg-main: #0c1214;
+  --bg-card: #131c1f;
+  --bg-card-hover: #182428;
+  --border: #203137;
+  --teal: #00e5c0;
+  --teal-hover: #00ffd5;
+  --text-primary: #e6f6f4;
+  --text-secondary: #8aa6a1;
+  --text-muted: #56736d;
+  --danger: #ff6b70;
+  --success: #00e5c0;
+  font-family: "Segoe UI", sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 360px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--bg-main);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 17px;
+  border-bottom: 2px solid var(--teal);
+  background: var(--bg-card);
+}
+
+.brand-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.brand-icon {
+  display: block;
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--teal);
+}
+
+.brand-title {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.brand-subtitle {
+  margin-top: 3px;
+  color: var(--teal);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1.15px;
+}
+
+.format-badge {
+  padding: 4px 8px;
+  border: 1px solid var(--teal);
+  background: #112826;
+  color: var(--teal);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.main {
+  padding: 19px 17px 17px;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  color: var(--teal);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.section-title::after {
+  height: 1px;
+  flex: 1;
+  background: var(--border);
+  content: "";
+}
+
+.export-button {
+  display: flex;
+  width: 100%;
+  min-height: 52px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid var(--teal);
+  background: var(--teal);
+  color: #0c1214;
+  cursor: pointer;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.35px;
+  transition: background-color 150ms ease, transform 150ms ease;
+}
+
+.export-button:hover {
+  background: var(--teal-hover);
+}
+
+.export-button:active {
+  transform: translateY(1px);
+}
+
+.export-button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.button-icon {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.status {
+  display: flex;
+  min-height: 17px;
+  align-items: center;
+  gap: 8px;
+  margin-top: 13px;
+  color: var(--text-secondary);
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  flex: 0 0 7px;
+  background: var(--teal);
+}
+
+.status[data-state="error"] {
+  color: var(--danger);
+}
+
+.status[data-state="error"] .status-dot {
+  background: var(--danger);
+}
+
+.status[data-state="success"] .status-dot {
+  background: var(--success);
+}

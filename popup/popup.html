@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subt Export</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header class="header">
+    <div class="brand-wrapper">
+      <img src="../icons/logo.svg" alt="" class="brand-icon">
+      <div>
+        <div class="brand-title">Subt Export</div>
+        <div class="brand-subtitle">СУБТИТРЫ В ТЕКСТ</div>
+      </div>
+    </div>
+    <span class="format-badge">TXT</span>
+  </header>
+
+  <main class="main">
+    <div class="section-title">ЭКСПОРТ ВИДЕО</div>
+    <button id="exportButton" class="export-button" type="button">
+      <span class="button-icon" aria-hidden="true">↓</span>
+      <span>Скачать subt.txt</span>
+    </button>
+    <div id="status" class="status" role="status" aria-live="polite">
+      <span class="status-dot" aria-hidden="true"></span>
+      <span id="statusText">Готово к экспорту</span>
+    </div>
+  </main>
+
+  <script src="popup.js"></script>
+</body>
+</html>
